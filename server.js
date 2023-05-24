@@ -12,7 +12,11 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT;
-mongoose.connect(process.env.DB_URL);
+// mongoose.connect(process.env.DB_URL);
+
+mongoose.connect(
+  "mongodb://mongo:6wKl2uYUANR4biD7jjnW@containers-us-west-135.railway.app:6588"
+);
 
 app.use(cors());
 app.use(express.json());
